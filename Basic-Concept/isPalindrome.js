@@ -1,19 +1,17 @@
 export function twoPointersPalindromeChecker(str) {
     str = str.split(" ").join("").toLowerCase() // for spaces and cases
-    let isPalindrome = true
     let leftPointer = 0
     let rightPointer = str.length - 1
     
-    while (leftPointer != str.length) {
+    while (leftPointer < rightPointer) {
         if (str[leftPointer] !== str[rightPointer]) {
-            isPalindrome = false
-            break;
+            return false
         }
         leftPointer+=1
         rightPointer-=1
     }
 
-    return isPalindrome
+    return true
 }
 
 export function reversedStringPalindrome(str) {
