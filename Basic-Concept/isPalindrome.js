@@ -1,3 +1,10 @@
+/* 4 ways of checking if a input:str is a palindrome 
+    - two pointers 
+    - loop
+    - recursion
+    - reverse() method
+*/ 
+
 export function twoPointersPalindromeChecker(str) {
     str = str.split(" ").join("").toLowerCase() // for spaces and cases
     let leftPointer = 0
@@ -20,7 +27,7 @@ export function reversedStringPalindromeUsingForLoop(str) {
 
     for (let i = str.length-1; i >= 0; i--) {
         reversedString += str[i]
-    }
+    }   
 
     return reversedString === str
 }
@@ -51,7 +58,7 @@ console.log(twoPointersPalindromeChecker(palindrome_text), "Must be true")
 console.log(reversedStringPalindromeUsingForLoop(palindrome_text), "Must be true")
 console.log(reversedStringPalindromeUsingReverseMethod(palindrome_text), "Must be true")
 console.log(reversedStringPalindromeUsingRecursion(palindrome_text), "Must be true")
-
++
 console.log(twoPointersPalindromeChecker(notPalindromeText), "Must be false")
 console.log(reversedStringPalindromeUsingForLoop(notPalindromeText), "Must be false")
 console.log(reversedStringPalindromeUsingReverseMethod(notPalindromeText), "Must be false")
